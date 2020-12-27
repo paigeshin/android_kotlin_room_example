@@ -62,7 +62,6 @@ class ListFragment : Fragment() {
         val builder = AlertDialog.Builder(requireContext())
         builder.setPositiveButton("Yes") {_, _ ->
             mUserViewModel.deleteAllUsers()
-            findNavController().navigate(R.id.action_updateFragment_to_listFragment)
         }
         builder.setNegativeButton("No"){_, _ -> }
         builder.setTitle("Delete All" +
